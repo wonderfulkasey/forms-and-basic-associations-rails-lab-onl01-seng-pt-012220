@@ -17,7 +17,7 @@ class Song < ActiveRecord::Base
   end
 
   def genre_name
-    self.genre ? self.genre.name : nil 
+    self.genre ? self.genre.name : nil
   end
 
   def notes_attributes=(contents)
@@ -29,7 +29,7 @@ class Song < ActiveRecord::Base
     end
   end
 
-  def notes_attributes 
+  def notes_attributes
     self.notes.map {|note| note.content}
   end
 
